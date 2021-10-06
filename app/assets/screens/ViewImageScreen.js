@@ -8,11 +8,11 @@ function ViewImageScreen(props) {
     <View styles={styles.container}>
       <View styles={styles.closeIcon}></View>
       <View styles={styles.deleteIcon}></View>
-      <Image
+      {/* <Image
         resizeMode="contain"
         style={styles.image}
         source={require("../Images/Kitchen.jpeg")}
-      />
+      /> */}
     </View>
   );
 }
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     left: 30,
   },
   container: {
-    backgroundColor: "#000",
+    backgroundColor: colors.black,
     flex: 1,
   },
   deleteIcon: {
