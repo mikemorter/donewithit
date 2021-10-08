@@ -1,18 +1,18 @@
 import React from "react";
 import { Image, View, StyleSheet } from "react-native";
 
-import colors from "../../config/colors";
+import colors from "../config/colors";
 
 function ViewImageScreen(props) {
   return (
     <View styles={styles.container}>
       <View styles={styles.closeIcon}></View>
       <View styles={styles.deleteIcon}></View>
-      {/* <Image
+      <Image
         resizeMode="contain"
         style={styles.image}
-        source={require("../Images/Kitchen.jpeg")}
-      /> */}
+        source={require("../assets/Images/chair.jpg")}
+      />
     </View>
   );
 }

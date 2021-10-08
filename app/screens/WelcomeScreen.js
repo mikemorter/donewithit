@@ -1,18 +1,18 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
-import colors from "../../config/colors";
+import colors from "../config/colors";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
       style={styles.background}
-      source={require("../Images/house.jpeg")}
+      source={require("../assets/Images/house.jpeg")}
     >
       <View style={styles.logoContainer}>
         <Image
           style={styles.logo}
-          source={require("../Images/SpacerLogo.png")}
+          source={require("../assets/Images/SpacerLogo.png")}
         />
         <Text>Communication is Key</Text>
       </View>
