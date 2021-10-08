@@ -4,9 +4,12 @@ import { Text, StyleSheet, SafeAreaView, TouchableOpacity } from "react-native";
 import AppiText from "./AppStyles/AppText";
 import colors from "../config/colors";
 
-function AppButton({ title, onPress }) {
+function AppButton({ title, onPress, color = "primary" }) {
   return (
-    <TouchableOpacity style={style.button} onPress={onPress}>
+    <TouchableOpacity
+      style={[style.button, { backgroundColor: colors[color] }]}
+      onPress={onPress}
+    >
       <Text style={style.loginText}>{title}</Text>
     </TouchableOpacity>
   );
@@ -25,6 +28,7 @@ const style = StyleSheet.create({
     backgroundColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
+    marginVertical: 10,
   },
   loginText: {
     color: colors.white,
