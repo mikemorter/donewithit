@@ -19,8 +19,12 @@ function WelcomeScreen(props) {
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" />
-        <AppButton title="Register" color="secondary" />
+        <AppButton title="Login" onPress={() => console.log("Login tapped")} />
+        <AppButton
+          title="Register"
+          color="secondary"
+          onPress={() => console.log("Register tapped")}
+        />
       </View>
     </ImageBackground>
   );

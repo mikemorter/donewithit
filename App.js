@@ -4,13 +4,15 @@ import { StyleSheet, Text, View, AppText } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import AppButton from "./app/components/AppButton";
+import Card from "./app/components/Card";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AppiText from "./app/components/AppStyles/AppText";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
-  return <WelcomeScreen />;
+  return <ViewImageScreen />;
 }
 
 const styles = StyleSheet.create({
