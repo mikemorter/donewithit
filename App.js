@@ -1,19 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, AppText } from "react-native";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import AppButton from "./app/components/AppButton";
-import Card from "./app/components/Card";
+import ListItem from "./app/components/ListItem";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
-import AppiText from "./app/components/AppStyles/AppText";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
+import Icon from "./app/components/Icon";
+import Screen from "./app/components/Screen";
 
 export default function App() {
-  return <MessagesScreen />;
+  return (
+    <Screen>
+      <ListItem title="My title" ImageComponent={<Icon name="email" />} />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({
