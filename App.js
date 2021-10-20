@@ -6,11 +6,14 @@ import ListItem from "./app/components/ListItem";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Icon from "./app/components/Icon";
 import Screen from "./app/components/Screen";
+import AccountScreen from "./app/screens/AccountScreen";
+
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   return (
     <Screen>
-      <ListItem title="My title" ImageComponent={<Icon name="email" />} />
+      <AccountScreen />
     </Screen>
   );
 }
