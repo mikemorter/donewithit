@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, Text, View, AppText } from "react-native";
+import { StyleSheet, Text, View, AppText, Switch } from "react-native";
 import ListItem from "./app/components/ListItem";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -14,11 +14,10 @@ import { TextInput } from "react-native-gesture-handler";
 import AppTextInputs from "./app/components/AppTextInputs";
 
 export default function App() {
-  const [firstName, setFirstName] = useState("");
+  const [isNew, setIsNew] = useState(false);
   return (
     <Screen>
-      <Text>{firstName}</Text>
-      <AppTextInputs placeholder="Username" icon="email" />
+      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </Screen>
   );
 }
