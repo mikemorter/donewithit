@@ -15,6 +15,7 @@ import AppTextInputs from "./app/components/AppTextInputs";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
+import ListEditScreen from "./app/screens/ListEditScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -24,7 +25,11 @@ const categories = [
 
 export default function App() {
   const [category, setCategory] = useState(categories[0]);
-  return <RegisterScreen />;
+  return (
+    <Screen>
+      <WelcomeScreen />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({
