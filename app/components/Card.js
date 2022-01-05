@@ -9,8 +9,8 @@ function Card({ title, subTitle, image }) {
     <View style={styles.card}>
       <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <AppiText style={styles.title}>{title}</AppiText>
-        <AppiText style={styles.subTitle}>{subTitle}</AppiText>
+        <AppiText style={styles.title} numberOfLines={1}>{title}</AppiText>
+        <AppiText style={styles.subTitle} numberOfLines={2}>{subTitle}</AppiText>
       </View>
     </View>
   );
