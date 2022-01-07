@@ -5,9 +5,9 @@ import { TextInput } from "react-native-gesture-handler";
 
 import defaultStyles from "../config/styles";
 
-function AppTextInputs({ icon, ...otherProps }) {
+function AppTextInputs({ icon, width = '100%', ...otherProps }) {
   return (
-    <View style={styles.containter}>
+    <View style={[styles.containter, { width }]}>
       {icon && (
         <MaterialCommunityIcons
           name={icon}
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
     flexDirection: "row",
-    width: "100%",
     padding: 15,
     marginVertical: 10,
   },

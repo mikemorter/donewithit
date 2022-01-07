@@ -7,4 +7,11 @@ export default {
   light: "#f8f4f4",
   danger: "#ff5252",
   dark: "#0c0c0c",
+  furniture: "#fc5c65",
+  cars: "#fd9644",
+  cameras: "#fed330",
+  games: "#26de81",
+  clothing: "#2bcbba",
+  sports: "#45aaf2",
+  music: "#4b7bec",
 };
