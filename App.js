@@ -17,7 +17,7 @@ import AppTextInputs from "./app/components/AppTextInputs";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
-import ListEditScreen from "./app/screens/ListEditScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessageScreen from "./app/screens/MessagesScreen"
@@ -31,21 +31,7 @@ const categories = [
 ];
 
 export default function App() {
-
-  const [imageUris, setImageUris] = useState([]);
-
-  const handleAdd = uri => {
-    setImageUris([...imageUris, uri])
-  }
-  const handleRemove = uri => {
-    setImageUris(imageUris.filter(imageUri => imageUri !== uri))
-  }
-
-  return (
-    <Screen>
-      <ImageInputList imageUris={imageUris} onAddImage={handleAdd} onRemoveImage={handleRemove} />
-    </Screen>
-  );
+  return <ListingEditScreen />
 }
 
 const styles = StyleSheet.create({

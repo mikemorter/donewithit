@@ -15,13 +15,22 @@ import AppiText from "./AppStyles/AppText";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
 
-function AppPicker({ icon, items, onSelectedItem, numberOfColumns = 1, selectedItem, PickerItemComponent = PickerItem, placeholder, width = "100%", }) {
+function AppPicker({
+  icon,
+  items,
+  numberOfColumns = 1,
+  onSelectItem,
+  PickerItemComponent = PickerItem,
+  placeholder,
+  selectedItem,
+  width = "100%",
+}) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-        <View style={[styles.containter, { width }]}>
+        <View style={[styles.container, { width }]}>
           {icon && (
             <MaterialCommunityIcons
               name={icon}
@@ -30,11 +39,12 @@ function AppPicker({ icon, items, onSelectedItem, numberOfColumns = 1, selectedI
               style={styles.icon}
             />
           )}
-          
-          <AppiText style={styles.text}>
-          { selectedItem ? <AppiText style={styles.text}>{selectedItem.label}</AppiText> : <AppiText style={styles.placeholder}>{placeholder}</AppiText>}
-            {/* {selectedItem ? selectedItem.label : placeholder} */}
-          </AppiText>
+          {selectedItem ? (
+            <AppiText style={styles.text}>{selectedItem.label}</AppiText>
+          ) : (
+            <AppiText style={styles.placeholder}>{placeholder}</AppiText>
+          )}
+
           <MaterialCommunityIcons
             name="chevron-down"
             size={20}
@@ -55,7 +65,7 @@ function AppPicker({ icon, items, onSelectedItem, numberOfColumns = 1, selectedI
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
-                  onSelectedItem(item);
+                  onSelectItem(item);
                 }}
               />
             )}
@@ -67,14 +77,13 @@ function AppPicker({ icon, items, onSelectedItem, numberOfColumns = 1, selectedI
 }
 
 const styles = StyleSheet.create({
-  containter: {
+  container: {
     backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
     flexDirection: "row",
     padding: 15,
     marginVertical: 10,
   },
-
   icon: {
     marginRight: 10,
   },
